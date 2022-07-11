@@ -189,7 +189,7 @@ app_server <- function(input, output, session) {
       micro_ini0 <- readRDS(paste0("./R/Geometrias/Microregioes_inicio/", name_file_micro_ini))
     }
 
-    name_file_micro_fim <- paste(paste("Micro_fim", input$apreensao, input$uf, sep = "_"), "rds", sep = ".")
+    name_file_micro_fim <- paste(paste("micro_fim", input$apreensao, input$uf, sep = "_"), "rds", sep = ".")
     if (file.exists(paste0("./R/Geometrias/Microregioes_final/", name_file_micro_fim))) {
       micro_fim <- readRDS(paste0("./R/Geometrias/Microregioes_final/", name_file_micro_fim))
     }
@@ -374,52 +374,52 @@ app_server <- function(input, output, session) {
     req(input$uf2)
     req(input$microrregiao2)
 
-    name_file_micro_fim <- paste(paste("Micro_fim", input$microrregiao2, input$uf2, sep = "_"), "rds", sep = ".")
+    name_file_micro_fim <- paste(paste("micro_fim", input$microrregiao2, input$uf2, sep = "_"), "rds", sep = ".")
     if (file.exists(paste0("./R/Geometrias/Microrregiao_de_destino/", name_file_micro_fim))) {
       micro_fim <- readRDS(paste0("./R/Geometrias/Microrregiao_de_destino/", name_file_micro_fim))
     }
 
-    name_file_rotas <- paste(paste("Rotas", "Micro_Fim", input$microrregiao2, input$uf2, "Maconha", sep = "_"), "rds", sep = ".")
+    name_file_rotas <- paste(paste("Rotas", "micro_fim", input$microrregiao2, input$uf2, "Maconha", sep = "_"), "rds", sep = ".")
     if (file.exists(paste0("./R/Geometrias/Rotas_por_destino/", name_file_rotas))) {
       rotas_maconha <- readRDS(paste0("./R/Geometrias/Rotas_por_destino/", name_file_rotas))
     }
 
-    name_file_rotas <- paste(paste("Rotas", "Micro_Fim", input$microrregiao2, input$uf2, "Cocaina", sep = "_"), "rds", sep = ".")
+    name_file_rotas <- paste(paste("Rotas", "micro_fim", input$microrregiao2, input$uf2, "Cocaina", sep = "_"), "rds", sep = ".")
     if (file.exists(paste0("./R/Geometrias/Rotas_por_destino/", name_file_rotas))) {
       rotas_cocaina <- readRDS(paste0("./R/Geometrias/Rotas_por_destino/", name_file_rotas))
     }
 
-    name_file_rotas <- paste(paste("Rotas", "Micro_Fim", input$microrregiao2, input$uf2, "Cigarros", sep = "_"), "rds", sep = ".")
+    name_file_rotas <- paste(paste("Rotas", "micro_fim", input$microrregiao2, input$uf2, "Cigarros", sep = "_"), "rds", sep = ".")
     if (file.exists(paste0("./R/Geometrias/Rotas_por_destino/", name_file_rotas))) {
       rotas_cigarros <- readRDS(paste0("./R/Geometrias/Rotas_por_destino/", name_file_rotas))
     }
 
-    name_file_rotas <- paste(paste("Rotas", "Micro_Fim", input$microrregiao2, input$uf2, "Crack", sep = "_"), "rds", sep = ".")
+    name_file_rotas <- paste(paste("Rotas", "micro_fim", input$microrregiao2, input$uf2, "Crack", sep = "_"), "rds", sep = ".")
     if (file.exists(paste0("./R/Geometrias/Rotas_por_destino/", name_file_rotas))) {
       rotas_crack <- readRDS(paste0("./R/Geometrias/Rotas_por_destino/", name_file_rotas))
     }
 
-    name_file_rotas <- paste(paste("Rotas", "Micro_Fim", input$microrregiao2, input$uf2, "Real", sep = "_"), "rds", sep = ".")
+    name_file_rotas <- paste(paste("Rotas", "micro_fim", input$microrregiao2, input$uf2, "Real", sep = "_"), "rds", sep = ".")
     if (file.exists(paste0("./R/Geometrias/Rotas_por_destino/", name_file_rotas))) {
       rotas_real <- readRDS(paste0("./R/Geometrias/Rotas_por_destino/", name_file_rotas))
     }
 
-    name_file_rotas <- paste(paste("Rotas", "Micro_Fim", input$microrregiao2, input$uf2, "Haxixe", sep = "_"), "rds", sep = ".")
+    name_file_rotas <- paste(paste("Rotas", "micro_fim", input$microrregiao2, input$uf2, "Haxixe", sep = "_"), "rds", sep = ".")
     if (file.exists(paste0("./R/Geometrias/Rotas_por_destino/", name_file_rotas))) {
       rotas_haxixe <- readRDS(paste0("./R/Geometrias/Rotas_por_destino/", name_file_rotas))
     }
 
-    name_file_rotas <- paste(paste("Rotas", "Micro_Fim", input$microrregiao2, input$uf2, "Dolar", sep = "_"), "rds", sep = ".")
+    name_file_rotas <- paste(paste("Rotas", "micro_fim", input$microrregiao2, input$uf2, "Dolar", sep = "_"), "rds", sep = ".")
     if (file.exists(paste0("./R/Geometrias/Rotas_por_destino/", name_file_rotas))) {
       rotas_dolar <- readRDS(paste0("./R/Geometrias/Rotas_por_destino/", name_file_rotas))
     }
 
-    name_file_rotas <- paste(paste("Rotas", "Micro_Fim", input$microrregiao2, input$uf2, "Skunk", sep = "_"), "rds", sep = ".")
+    name_file_rotas <- paste(paste("Rotas", "micro_fim", input$microrregiao2, input$uf2, "Skunk", sep = "_"), "rds", sep = ".")
     if (file.exists(paste0("./R/Geometrias/Rotas_por_destino/", name_file_rotas))) {
       rotas_skunk <- readRDS(paste0("./R/Geometrias/Rotas_por_destino/", name_file_rotas))
     }
 
-    name_file_rotas <- paste(paste("Rotas", "Micro_Fim", input$microrregiao2, input$uf2, "Ecstasy", sep = "_"), "rds", sep = ".")
+    name_file_rotas <- paste(paste("Rotas", "micro_fim", input$microrregiao2, input$uf2, "Ecstasy", sep = "_"), "rds", sep = ".")
     if (file.exists(paste0("./R/Geometrias/Rotas_por_destino/", name_file_rotas))) {
       rotas_ecstasy <- readRDS(paste0("./R/Geometrias/Rotas_por_destino/", name_file_rotas))
     }
@@ -428,39 +428,39 @@ app_server <- function(input, output, session) {
     geometrias3 <-
       mapview(micro_fim, layer.name = paste("Região de chegada", input$microrregiao2, input$uf2, sep = " "), col.regions = "green", map.types = c("OpenStreetMap", "Esri.WorldImagery")) #+
 
-    if (file.exists(paste0("./R/Geometrias/Rotas_por_destino/", paste(paste("Rotas", "Micro_Fim", input$microrregiao2, input$uf2, "Maconha", sep = "_"), "rds", sep = ".")))) {
+    if (file.exists(paste0("./R/Geometrias/Rotas_por_destino/", paste(paste("Rotas", "micro_fim", input$microrregiao2, input$uf2, "Maconha", sep = "_"), "rds", sep = ".")))) {
       mapview(rotas_maconha, layer.name = paste("Rotas", "- Maconha", sep = " "), color = "navy", map.types = c("OpenStreetMap", "Esri.WorldImagery"))
     } +
 
-      if (file.exists(paste0("./R/Geometrias/Rotas_por_destino/", paste(paste("Rotas", "Micro_Fim", input$microrregiao2, input$uf2, "Cocaina", sep = "_"), "rds", sep = ".")))) {
+      if (file.exists(paste0("./R/Geometrias/Rotas_por_destino/", paste(paste("Rotas", "micro_fim", input$microrregiao2, input$uf2, "Cocaina", sep = "_"), "rds", sep = ".")))) {
         mapview(rotas_cocaina, layer.name = paste("Rotas", "- Cocaina", sep = " "), color = "navy", map.types = c("OpenStreetMap", "Esri.WorldImagery"))
       } +
 
-      if (file.exists(paste0("./R/Geometrias/Rotas_por_destino/", paste(paste("Rotas", "Micro_Fim", input$microrregiao2, input$uf2, "Cigarros", sep = "_"), "rds", sep = ".")))) {
+      if (file.exists(paste0("./R/Geometrias/Rotas_por_destino/", paste(paste("Rotas", "micro_fim", input$microrregiao2, input$uf2, "Cigarros", sep = "_"), "rds", sep = ".")))) {
         mapview(rotas_cigarros, layer.name = paste("Rotas", "- Cigarros", sep = " "), color = "navy", map.types = c("OpenStreetMap", "Esri.WorldImagery"))
       } +
 
-      if (file.exists(paste0("./R/Geometrias/Rotas_por_destino/", paste(paste("Rotas", "Micro_Fim", input$microrregiao2, input$uf2, "Crack", sep = "_"), "rds", sep = ".")))) {
+      if (file.exists(paste0("./R/Geometrias/Rotas_por_destino/", paste(paste("Rotas", "micro_fim", input$microrregiao2, input$uf2, "Crack", sep = "_"), "rds", sep = ".")))) {
         mapview(rotas_crack, layer.name = paste("Rotas", "- Crack", sep = " "), color = "navy", map.types = c("OpenStreetMap", "Esri.WorldImagery"))
       } +
 
-      if (file.exists(paste0("./R/Geometrias/Rotas_por_destino/", paste(paste("Rotas", "Micro_Fim", input$microrregiao2, input$uf2, "Real", sep = "_"), "rds", sep = ".")))) {
+      if (file.exists(paste0("./R/Geometrias/Rotas_por_destino/", paste(paste("Rotas", "micro_fim", input$microrregiao2, input$uf2, "Real", sep = "_"), "rds", sep = ".")))) {
         mapview(rotas_real, layer.name = paste("Rotas", "- Real", sep = " "), color = "navy", map.types = c("OpenStreetMap", "Esri.WorldImagery"))
       } +
 
-      if (file.exists(paste0("./R/Geometrias/Rotas_por_destino/", paste(paste("Rotas", "Micro_Fim", input$microrregiao2, input$uf2, "Haxixe", sep = "_"), "rds", sep = ".")))) {
+      if (file.exists(paste0("./R/Geometrias/Rotas_por_destino/", paste(paste("Rotas", "micro_fim", input$microrregiao2, input$uf2, "Haxixe", sep = "_"), "rds", sep = ".")))) {
         mapview(rotas_haxixe, layer.name = paste("Rotas", "- Haxixe", sep = " "), color = "navy", map.types = c("OpenStreetMap", "Esri.WorldImagery"))
       } +
 
-      if (file.exists(paste0("./R/Geometrias/Rotas_por_destino/", paste(paste("Rotas", "Micro_Fim", input$microrregiao2, input$uf2, "Dolar", sep = "_"), "rds", sep = ".")))) {
+      if (file.exists(paste0("./R/Geometrias/Rotas_por_destino/", paste(paste("Rotas", "micro_fim", input$microrregiao2, input$uf2, "Dolar", sep = "_"), "rds", sep = ".")))) {
         mapview(rotas_dolar, layer.name = paste("Rotas", "- Dolar", sep = " "), color = "navy", map.types = c("OpenStreetMap", "Esri.WorldImagery"))
       } +
 
-      if (file.exists(paste0("./R/Geometrias/Rotas_por_destino/", paste(paste("Rotas", "Micro_Fim", input$microrregiao2, input$uf2, "Skunk", sep = "_"), "rds", sep = ".")))) {
+      if (file.exists(paste0("./R/Geometrias/Rotas_por_destino/", paste(paste("Rotas", "micro_fim", input$microrregiao2, input$uf2, "Skunk", sep = "_"), "rds", sep = ".")))) {
         mapview(rotas_skunk, layer.name = paste("Rotas", "- Skunk", sep = " "), color = "navy", map.types = c("OpenStreetMap", "Esri.WorldImagery"))
       } +
 
-      if (file.exists(paste0("./R/Geometrias/Rotas_por_destino/", paste(paste("Rotas", "Micro_Fim", input$microrregiao2, input$uf2, "Ecstasy", sep = "_"), "rds", sep = ".")))) {
+      if (file.exists(paste0("./R/Geometrias/Rotas_por_destino/", paste(paste("Rotas", "micro_fim", input$microrregiao2, input$uf2, "Ecstasy", sep = "_"), "rds", sep = ".")))) {
         mapview(rotas_ecstasy, layer.name = paste("Rotas", "- Ecstasy", sep = " "), color = "navy", map.types = c("OpenStreetMap", "Esri.WorldImagery"))
 
       }
