@@ -374,7 +374,7 @@ app_server <- function(input, output, session) {
     req(input$uf2)
     req(input$microrregiao2)
 
-    name_file_micro_fim <- paste(paste("Micro_Fim", input$microrregiao2, input$uf2, sep = "_"), "rds", sep = ".")
+    name_file_micro_fim <- paste(paste("Micro_fim", input$microrregiao2, input$uf2, sep = "_"), "rds", sep = ".")
     if (file.exists(paste0("./R/Geometrias/Microrregiao_de_destino/", name_file_micro_fim))) {
       micro_fim <- readRDS(paste0("./R/Geometrias/Microrregiao_de_destino/", name_file_micro_fim))
     }
