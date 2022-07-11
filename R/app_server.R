@@ -426,7 +426,7 @@ app_server <- function(input, output, session) {
 
 
     geometrias3 <-
-      mapview(micro_fim, layer.name = paste("Região de partida", input$microrregiao2, input$uf2, sep = " "), col.regions = "green", map.types = c("OpenStreetMap", "Esri.WorldImagery")) #+
+      mapview(micro_fim, layer.name = paste("Região de chegada", input$microrregiao2, input$uf2, sep = " "), col.regions = "green", map.types = c("OpenStreetMap", "Esri.WorldImagery")) #+
 
     if (file.exists(paste0("./R/Geometrias/Rotas_por_destino/", paste(paste("Rotas", "Micro_Fim", input$microrregiao2, input$uf2, "Maconha", sep = "_"), "rds", sep = ".")))) {
       mapview(rotas_maconha, layer.name = paste("Rotas", "- Maconha", sep = " "), color = "navy", map.types = c("OpenStreetMap", "Esri.WorldImagery"))
@@ -440,7 +440,7 @@ app_server <- function(input, output, session) {
         mapview(rotas_cigarros, layer.name = paste("Rotas", "- Cigarros", sep = " "), color = "navy", map.types = c("OpenStreetMap", "Esri.WorldImagery"))
       } +
 
-      if (file.exists(paste0("./R/Geometrias/Rotas_por_destinom/", paste(paste("Rotas", "Micro_Fim", input$microrregiao2, input$uf2, "Crack", sep = "_"), "rds", sep = ".")))) {
+      if (file.exists(paste0("./R/Geometrias/Rotas_por_destino/", paste(paste("Rotas", "Micro_Fim", input$microrregiao2, input$uf2, "Crack", sep = "_"), "rds", sep = ".")))) {
         mapview(rotas_crack, layer.name = paste("Rotas", "- Crack", sep = " "), color = "navy", map.types = c("OpenStreetMap", "Esri.WorldImagery"))
       } +
 
