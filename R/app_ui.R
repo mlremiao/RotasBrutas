@@ -25,7 +25,7 @@ microrregioes_fim <- readRDS("./R/microrregioes_fim.rds")
 
 app_ui <- dashboardPage(
 
-  title = HTML("Rotas - Semânticas - PRF"),
+  title = HTML("Rotas Semânticas"),
 
   dashboardHeader(
 
